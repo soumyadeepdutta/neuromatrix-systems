@@ -76,7 +76,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-neuromatrix-darker text-white`}>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-nm-bg text-nm-text`}>
         {children}
       </body>
     </html>

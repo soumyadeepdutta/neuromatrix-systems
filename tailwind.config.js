@@ -50,15 +50,13 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom NeuroMatrix colors
-        neuromatrix: {
-          primary: "#00d4ff",    // Neon blue
-          secondary: "#00ff88",  // Cyber green
-          accent: "#ff0080",     // Neon pink
-          dark: "#0a0a0a",      // Deep black
-          darker: "#050505",    // Deeper black
-          light: "#1a1a1a",     // Light black
-          gray: "#2a2a2a",      // Dark gray
+        // Professional Tech Theme colors
+        nm: {
+          primary: "#00ADB5",    // Teal Blue
+          secondary: "#00E5FF",  // Bright Cyan
+          accent: "#FF5722",     // Sunset Orange
+          bg: "#121212",        // Charcoal Dark Background
+          text: "#B0BEC5",      // Cool Gray text
         }
       },
       borderRadius: {
@@ -84,8 +82,8 @@ module.exports = {
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 15px #00d4ff" },
-          "50%": { boxShadow: "0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff" },
+          "0%, 100%": { boxShadow: "0 0 5px #00ADB5, 0 0 10px #00ADB5, 0 0 15px #00ADB5" },
+          "50%": { boxShadow: "0 0 10px #00ADB5, 0 0 20px #00ADB5, 0 0 30px #00ADB5" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
@@ -107,7 +105,9 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'neural-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4ff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+        'gradient-nm': 'linear-gradient(90deg, #00ADB5 0%, #00E5FF 100%)',
+        'gradient-accent': 'linear-gradient(90deg, #FF5722 0%, #FF784E 100%)',
+        'neural-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300ADB5' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
       },
     },
   },

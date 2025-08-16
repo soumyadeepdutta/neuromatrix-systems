@@ -56,7 +56,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-nm-bg text-nm-text;
     font-family: 'Inter', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -65,12 +65,12 @@
 }
 
 @layer components {
-  .neuromatrix-gradient {
-    background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #ff0080 100%);
+  .tech-gradient {
+    background: linear-gradient(90deg, #00ADB5 0%, #00E5FF 100%);
   }
   
-  .neuromatrix-glow {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  .tech-glow {
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
   }
   
   .glassmorphism {
@@ -80,7 +80,7 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, #00d4ff, #00ff88);
+    background: linear-gradient(90deg, #00ADB5, #00E5FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -93,14 +93,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #121212;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00d4ff;
+  background: #00ADB5;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00ff88;
+  background: #00E5FF;
 }
