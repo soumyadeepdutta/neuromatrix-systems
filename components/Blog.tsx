@@ -111,7 +111,7 @@ export default function Blog() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{post.date}</span>
+                    <span>{post.publishedAt}</span>
                   </div>
                 </div>
 
