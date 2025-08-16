@@ -12,10 +12,10 @@ export default function Services() {
   const [hoveredService, setHoveredService] = useState<string | null>(null)
 
   return (
-    <section id="services" className="py-20 bg-neuromatrix-darker relative overflow-hidden">
+    <section id="services" className="py-20 bg-nm-bg relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-tl from-neuromatrix-secondary via-transparent to-neuromatrix-primary" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-nm-secondary via-transparent to-nm-primary" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,10 +27,10 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="text-gradient">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-nm-text mb-6">
+            Our <span className="text-nm-primary">Services</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-nm-text/80 max-w-3xl mx-auto leading-relaxed">
             We offer comprehensive IT solutions that drive digital transformation and business growth. 
             From AI and Machine Learning to Cloud Infrastructure and Cybersecurity.
           </p>
@@ -50,7 +50,7 @@ export default function Services() {
             >
               <motion.div
                 whileHover={{ y: -10 }}
-                className="bg-neuromatrix-gray/30 backdrop-blur-sm rounded-2xl p-6 border border-neuromatrix-primary/20 hover:border-neuromatrix-primary/40 transition-all duration-300 h-full relative overflow-hidden"
+                className="bg-nm-accent/10 backdrop-blur-sm rounded-2xl p-6 border border-nm-accent/30 hover:border-nm-accent/60 hover:shadow-[0_0_20px_#9D00FF] transition-all duration-300 h-full relative overflow-hidden"
               >
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
@@ -64,10 +64,10 @@ export default function Services() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-neuromatrix-primary transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-nm-text mb-3 group-hover:text-nm-primary transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed mb-6">
+                  <p className="text-nm-text/80 leading-relaxed mb-6">
                     {service.description}
                   </p>
 
@@ -79,14 +79,14 @@ export default function Services() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.4, delay: (index * 0.1) + (featureIndex * 0.1) }}
-                        className="flex items-center gap-2 text-sm text-gray-400"
+                        className="flex items-center gap-2 text-sm text-nm-text/70"
                       >
-                        <Check className="w-4 h-4 text-neuromatrix-secondary" />
+                        <Check className="w-4 h-4 text-nm-secondary" />
                         {feature}
                       </motion.div>
                     ))}
                     {service.features.length > 3 && (
-                      <div className="text-sm text-neuromatrix-primary font-medium">
+                      <div className="text-sm text-nm-primary font-medium">
                         +{service.features.length - 3} more features
                       </div>
                     )}
@@ -96,7 +96,7 @@ export default function Services() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full bg-gradient-to-r from-neuromatrix-primary to-neuromatrix-secondary text-white py-3 px-4 rounded-lg font-medium hover:shadow-lg hover:shadow-neuromatrix-primary/25 transition-all duration-200 flex items-center justify-center gap-2 group/btn"
+                    className="w-full bg-gradient-nm text-white py-3 px-4 rounded-lg font-medium hover:shadow-lg hover:shadow-nm-primary/25 transition-all duration-200 flex items-center justify-center gap-2 group/btn"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
@@ -110,7 +110,7 @@ export default function Services() {
                     opacity: hoveredService === service.id ? 1 : 0 
                   }}
                   transition={{ duration: 0.3 }}
-                  className="absolute inset-0 bg-gradient-to-br from-neuromatrix-primary/10 to-neuromatrix-secondary/10 rounded-2xl"
+                  className="absolute inset-0 bg-gradient-to-br from-nm-primary/10 to-nm-secondary/10 rounded-2xl"
                 />
               </motion.div>
             </motion.div>
@@ -124,18 +124,18 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-neuromatrix-gray/30 backdrop-blur-sm rounded-2xl p-8 border border-neuromatrix-primary/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-nm-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-nm-accent/30 hover:border-nm-accent/60 hover:shadow-[0_0_20px_#9D00FF] transition-all duration-300">
+            <h3 className="text-2xl font-bold text-nm-text mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-nm-text/80 mb-6 max-w-2xl mx-auto">
               Let's discuss how our innovative solutions can drive your digital transformation 
               and create lasting competitive advantages.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-neuromatrix-primary to-neuromatrix-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-neuromatrix-primary/25 transition-all duration-200 flex items-center gap-2 mx-auto group"
+              className="bg-gradient-nm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-nm-primary/25 transition-all duration-200 flex items-center gap-2 mx-auto group"
             >
               Schedule a Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
