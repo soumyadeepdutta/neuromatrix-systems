@@ -9,6 +9,12 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  webpack: (config) => {
+    config.externals.push({
+      backend: 'commonjs backend',
+    })
+    return config
+  },
 }
 
 module.exports = nextConfig
