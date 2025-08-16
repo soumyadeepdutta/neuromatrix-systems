@@ -26,7 +26,7 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-20 left-20 w-4 h-4 bg-neuromatrix-primary rounded-full opacity-60 blur-sm"
+          className="absolute top-20 left-20 w-4 h-4 bg-nm-primary rounded-full opacity-60 blur-sm"
         />
         <motion.div
           animate={{
@@ -38,7 +38,7 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-40 right-32 w-6 h-6 bg-neuromatrix-secondary rounded-full opacity-40 blur-sm"
+          className="absolute top-40 right-32 w-6 h-6 bg-nm-secondary rounded-full opacity-40 blur-sm"
         />
         <motion.div
           animate={{
@@ -50,7 +50,7 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-32 left-1/4 w-3 h-3 bg-neuromatrix-accent rounded-full opacity-50 blur-sm"
+          className="absolute bottom-32 left-1/4 w-3 h-3 bg-nm-accent rounded-full opacity-50 blur-sm"
         />
 
         {/* Neural Network Lines */}
@@ -85,16 +85,16 @@ export default function Hero() {
             />
             <defs>
               <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#00d4ff" />
-                <stop offset="100%" stopColor="#00ff88" />
+                <stop offset="0%" stopColor="#00F5FF" />
+                <stop offset="100%" stopColor="#00FF9D" />
               </linearGradient>
               <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#00ff88" />
-                <stop offset="100%" stopColor="#ff0080" />
+                <stop offset="0%" stopColor="#00FF9D" />
+                <stop offset="100%" stopColor="#9D00FF" />
               </linearGradient>
               <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ff0080" />
-                <stop offset="100%" stopColor="#00d4ff" />
+                <stop offset="0%" stopColor="#9D00FF" />
+                <stop offset="100%" stopColor="#00F5FF" />
               </linearGradient>
             </defs>
           </svg>
@@ -113,22 +113,22 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-nm-text mb-6"
           >
-            <span className="text-gradient">Engineering</span>
+            <span className="text-nm-primary">Engineering</span>
             <br />
-            <span className="text-white">Intelligence.</span>
+            <span className="text-nm-text">Intelligence.</span>
             <br />
-            <span className="text-gradient">Powering the</span>
+            <span className="text-nm-secondary">Powering the</span>
             <br />
-            <span className="text-white">Future.</span>
+            <span className="text-nm-text">Future.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+            className="text-xl md:text-2xl text-nm-text/80 max-w-4xl mx-auto mb-12 leading-relaxed"
           >
             We are a cutting-edge IT solutions company specializing in AI, Machine Learning, 
             Cloud Infrastructure, and Digital Transformation. Transforming businesses through 
@@ -147,7 +147,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('#contact')}
-            className="bg-gradient-to-r from-neuromatrix-primary to-neuromatrix-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-neuromatrix-primary/25 transition-all duration-200 flex items-center gap-2 group"
+            className="bg-gradient-nm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-nm-primary/25 transition-all duration-200 flex items-center gap-2 group"
           >
             Get in Touch
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -157,7 +157,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => scrollToSection('#services')}
-            className="border-2 border-neuromatrix-primary text-neuromatrix-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-neuromatrix-primary hover:text-white transition-all duration-200 flex items-center gap-2 group"
+            className="border-2 border-nm-primary text-nm-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-nm-primary hover:text-white transition-all duration-200 flex items-center gap-2 group"
           >
             <Play className="w-5 h-5" />
             Explore Services
@@ -172,10 +172,10 @@ export default function Hero() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           {[
-            { icon: Brain, label: 'AI & ML', color: 'text-cyan-400' },
-            { icon: Cloud, label: 'Cloud', color: 'text-blue-400' },
-            { icon: Shield, label: 'Security', color: 'text-green-400' },
-            { icon: Zap, label: 'Innovation', color: 'text-yellow-400' },
+            { icon: Brain, label: 'AI & ML', color: 'text-nm-primary' },
+            { icon: Cloud, label: 'Cloud', color: 'text-nm-secondary' },
+            { icon: Shield, label: 'Security', color: 'text-nm-accent' },
+            { icon: Zap, label: 'Innovation', color: 'text-nm-primary' },
           ].map((feature, index) => (
             <motion.div
               key={feature.label}
@@ -184,10 +184,10 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
               className="text-center group"
             >
-              <div className="w-16 h-16 mx-auto mb-3 bg-neuromatrix-gray/50 rounded-xl flex items-center justify-center group-hover:bg-neuromatrix-gray/80 transition-all duration-200">
+              <div className="w-16 h-16 mx-auto mb-3 bg-nm-accent/20 rounded-xl flex items-center justify-center group-hover:bg-nm-accent/40 transition-all duration-200 border border-nm-accent/30 group-hover:border-nm-accent/60">
                 <feature.icon className={`w-8 h-8 ${feature.color}`} />
               </div>
-              <p className="text-gray-400 text-sm font-medium">{feature.label}</p>
+              <p className="text-nm-text/70 text-sm font-medium">{feature.label}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -203,12 +203,12 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-neuromatrix-primary rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-nm-primary rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-neuromatrix-primary rounded-full mt-2"
+            className="w-1 h-3 bg-nm-primary rounded-full mt-2"
           />
         </motion.div>
       </motion.div>
